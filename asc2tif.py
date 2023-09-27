@@ -46,8 +46,8 @@ def convertir_asc_en_carpeta(carpeta, carpeta_gdb, epsg):
 
 if __name__ == '__main__':
     ########################################## MODIFICA AQUÍ ############################################################################
-    carpeta_inicial = "P:\99_IMPACTOS COSTA\99_TEMPORAL\Diego\ASC_TIF"  # Reemplaza con la ruta de tu carpeta
-    carpeta_gdb = "P:\99_IMPACTOS COSTA\99_TEMPORAL\Diego\ASC_TIF\Mapas_TIFF" # Reemplaza con la ruta de destino
+    carpeta_inicial = r"P:\99_IMPACTOS COSTA\99_TEMPORAL\Diego\ASC_TIF"  # Reemplaza con la ruta de tu carpeta
+    carpeta_gdb = r"P:\99_IMPACTOS COSTA\99_TEMPORAL\Diego\ASC_TIF\Mapas_TIFF" # Reemplaza con la ruta de destino
     epsg = 3035  # EPSG
     tiempo_espera = 0 # horas
     #####################################################################################################################################
