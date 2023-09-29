@@ -27,6 +27,9 @@ def convertir_asc_a_tif(archivo_asc, carpeta_gdb, epsg):
 
 def convertir_asc_en_carpeta(carpeta, carpeta_gdb, epsg):
 
+    if not os.path.exists(carpeta_gdb):
+        os.makedirs(carpeta)
+
     for root, _, files in os.walk(carpeta):
         for archivo in files:
             if archivo.endswith(".asc"):
@@ -46,7 +49,7 @@ def convertir_asc_en_carpeta(carpeta, carpeta_gdb, epsg):
 
 if __name__ == '__main__':
     ########################################## MODIFICA AQUÍ ############################################################################
-    carpeta_inicial = r"P:\99_IMPACTOS COSTA\99_TEMPORAL\Diego\ASC_TIF"  # Reemplaza con la ruta de tu carpeta
+    carpeta_inicial = r"P:\99_IMPACTOS COSTA\99_TEMPORAL\Diego\ASC_TIF_Relanzar"  # Reemplaza con la ruta de tu carpeta
     carpeta_gdb = r"P:\99_IMPACTOS COSTA\99_TEMPORAL\Diego\ASC_TIF\Mapas_TIFF" # Reemplaza con la ruta de destino
     epsg = 3035  # EPSG
     tiempo_espera = 0 # horas
